@@ -147,10 +147,10 @@ function show_loginpage()
 
 		include(LIBWWWDIR . '/header.php');
 		?>
-<h1>Not Authenticated</h1>
+<h1>Login or Register</h1>
 
 <p>
-Please supply your credentials below, or contact a staff member for assistance.
+Contact ajenner@tcd.ie if you're having trouble
 </p>
 
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
