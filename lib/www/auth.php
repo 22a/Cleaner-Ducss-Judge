@@ -147,35 +147,28 @@ function show_loginpage()
 
 		include(LIBWWWDIR . '/header.php');
 		?>
-<h1>Login or Register</h1>
 
-<p>
-Contact ajenner@tcd.ie if you're having trouble
-</p>
-
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<form class="spook-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<div class="login-text">Log in</div>
 <input type="hidden" name="cmd" value="login" />
-<table>
-<tr><td><label for="login">Login:</label></td><td><input type="text" id="login" name="login" value="" size="15" maxlength="15" accesskey="l" autofocus /></td></tr>
-<tr><td><label for="passwd">Password:</label></td><td><input type="password" id="passwd" name="passwd" value="" size="15" maxlength="255" accesskey="p" /></td></tr>
-<tr><td></td><td><input type="submit" value="Login" /></td></tr>
-</table>
+<input type="text" placeholder="Username" label="false" id="login" name="login" value="" autofocus />
+<input type="password" placeholder="Password" label="false" id="passwd" name="passwd" value="" />
+<input type="submit" value="Log in" />
 </form>
 
 <?php
 if (dbconfig_get('allow_registration', false)) { ?>
-<p>If you do not have an account, you can register for one below: </p>
-<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<form class="spook-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+<div class="login-text">Register</div>
 <input type="hidden" name="cmd" value="register" />
-<table>
-<tr><td><label for="login">Username:</label></td><td><input type="text" id="login" name="login" value="" size="15" maxlength="15" accesskey="l" /></td></tr>
-<tr><td><label for="passwd">Password:</label></td><td><input type="password" id="passwd" name="passwd" value="" size="15" maxlength="255" accesskey="p" /></td></tr>
-<tr><td><label for="passwd2">Retype password:</label></td><td><input type="password" id="passwd2" name="passwd2" value="" size="15" maxlength="255" accesskey="r" /></td></tr>
-<tr><td></td><td><input type="submit" value="Register" /></td></tr>
-</table>
+<input type="text" placeholder="Username" id="login" name="login" value="" />
+<input type="password" placeholder="Password" id="passwd" name="passwd" value="" />
+<input type="password" placeholder="Password Again" id="passwd2" name="passwd2" value="" />
+<input type="submit" value="Register" />
 </form>
 <?php } // endif allow_registration ?>
 
+<p>Contact ajenner@tcd.ie if you're having trouble</p>
 
 <?php
 		putDOMjudgeVersion();
