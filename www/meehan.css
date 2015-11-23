@@ -68,16 +68,18 @@ input:focus{
   border-radius: 2px;
   text-transform: none;
   font-size: 16px;
-  letter-spacing: none;
+  letter-spacing: 0;
 }
-
+#menutop {
+  margin-top: 20px;
+}
 #menutop a:hover {
   background: #1481e3;
   color: white;
 }
 
 #menutopright {
- top: 4ex;
+ top: 7ex;
 }
 
 #clock {
@@ -87,12 +89,12 @@ input:focus{
   color: white;
 }
 
-#timeleft {
+#timeleft, #selectcontest, #username {
  color: #1481e3;
  font-weight: 100;
 }
 
-.scorefilter, #categ_legend, #cell_legend {
+.scorefilter, #categ_legend, #cell_legend, #djlogo {
   display: none;
 }
 
