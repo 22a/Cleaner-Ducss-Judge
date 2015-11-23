@@ -79,7 +79,7 @@ input:focus{
 }
 
 #menutopright {
- top: 7ex;
+ top: 2ex;
 }
 
 #clock {
@@ -94,7 +94,40 @@ input:focus{
  font-weight: 100;
 }
 
-.scorefilter, #categ_legend, #cell_legend, #djlogo {
+.scorefilter, #categ_legend, #cell_legend, #djlogo, .heart {
   display: none;
 }
 
+.tableContainer {
+}
+
+.scoreboard {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.scoreboard th {
+  border: none;
+}
+.scoreboard tr {
+  border-bottom: 1px solid rgba(192, 192, 192, 0.25);
+}
+.scoreboard td {
+  border-right: 1px solid rgba(192, 192, 192, 0.25);
+}
+
+.sortorderswitch {
+  border-top: none;
+}
+
+#scoresummary {
+  display: none;
+}
+
+.score-head {
+  text-align: center;
+}
+
+.score-head h1, h4 {
+  font-weight: lighter;
+}

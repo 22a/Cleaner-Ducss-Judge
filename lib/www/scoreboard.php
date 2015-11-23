@@ -303,6 +303,7 @@ function renderScoreBoardTable($sdata, $myteamid = null, $static = FALSE,
 			break;
 		}
 	}
+  echo '<div class="tableContainer">';
 	echo '<table class="scoreboard' . (IS_JURY ? ' scoreboard_jury' : '') . ($center ? ' center' : '') . "\">\n";
 
 	// output table column groups (for the styles)
@@ -486,6 +487,7 @@ function renderScoreBoardTable($sdata, $myteamid = null, $static = FALSE,
 	}
 
 	echo "</table>\n\n";
+  echo "</div>\n\n";
 
 	if ( $showlegends ) {
 		echo "<p><br /><br /></p>\n";
@@ -557,6 +559,7 @@ function putScoreBoard($cdata, $myteamid = NULL, $static = FALSE, $filter = FALS
 	}
 
 	// page heading with contestname and start/endtimes
+  echo '<div class="score-head">';
 	echo "<h1>Scoreboard " . htmlspecialchars($cdata['name']) . "</h1>\n\n";
 
 	if ( $fdata['showfinal'] ) {
@@ -579,7 +582,7 @@ function putScoreBoard($cdata, $myteamid = NULL, $static = FALSE, $filter = FALS
 		}
 		echo "</h4>\n\n";
 	}
-
+  echo '</div>';
 	// The static scoreboard does not support filtering
 	if ( $filter!==FALSE && $static!==TRUE ) {
 
