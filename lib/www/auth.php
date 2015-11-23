@@ -120,7 +120,7 @@ function show_failed_login($msg)
 	$menu = false;
 	header("HTTP/1.0 403 Forbidden");
 	require(LIBWWWDIR . '/header.php');
-	echo "<h1>Not Authenticated</h1>\n\n<p>$msg</p>\n\n";
+	echo "<div class=\"spook-form\">\n\n<div class=\"login-text\">Not Authenticated</div>\n\n<p class=\"login-p\">$msg</p>\n\n</div>";
 	require(LIBWWWDIR . '/footer.php');
 	exit;
 }
@@ -156,6 +156,8 @@ function show_loginpage()
 <input type="submit" value="Log in" />
 </form>
 
+<p class="login-p">Contact ajenner@tcd.ie if you're having trouble</p>
+
 <?php
 if (dbconfig_get('allow_registration', false)) { ?>
 <form class="spook-form" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -168,10 +170,8 @@ if (dbconfig_get('allow_registration', false)) { ?>
 </form>
 <?php } // endif allow_registration ?>
 
-<p>Contact ajenner@tcd.ie if you're having trouble</p>
-
 <?php
-		putDOMjudgeVersion();
+		//putDOMjudgeVersion();
 		include(LIBWWWDIR . '/footer.php');
 		break;
 
@@ -428,7 +428,8 @@ function do_logout()
 		error("Unknown authentication method '" . AUTH_METHOD .
 		      "' requested, or logout not supported.");
 	}
-
+  header("Location: http://mee.space/");
+  die();
 	$title = 'Logout';
 	$menu = FALSE;
 	auditlog('user', @$userdata['userid'], 'logged out', $ip);
