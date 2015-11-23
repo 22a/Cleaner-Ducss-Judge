@@ -1,5 +1,6 @@
 body {
   background-color: #f8f8f8;
+  font-family: helvetica;
 }
 
 .spook-form {
@@ -74,3 +75,24 @@ input:focus{
   background: #1481e3;
   color: white;
 }
+
+#menutopright {
+ top: 4ex;
+}
+
+#clock {
+  font-family: helvetica;
+  border: none;
+  padding: 0px;
+  color: white;
+}
+
+#timeleft {
+ color: #1481e3;
+ font-weight: 100;
+}
+
+.scorefilter, #categ_legend, #cell_legend {
+  display: none;
+}
+
