@@ -8,7 +8,8 @@
  */
 
 require('init.php');
-$title="DUCSS Scoreboard";
+
+$title="ducss Scoreboard";
 // set auto refresh
 $refresh="30;url=./";
 
